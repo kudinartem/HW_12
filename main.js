@@ -1,8 +1,8 @@
 String.prototype.counter = function() {
   return this.split(/\s+/).length;
-  
-};
-window.onload = function() {
+}; 
+
+function render() {
   const header = document.querySelector('h1');
   const text = document.querySelector('p');
   text.insertAdjacentHTML('afterend', '<a href="https://forcemipsum.com/">The Text Source</a>');
@@ -24,3 +24,5 @@ window.onload = function() {
   };
   text.innerHTML = text.innerText.trim().split(' ').map(adjust).join(' ');
 };
+
+render();
